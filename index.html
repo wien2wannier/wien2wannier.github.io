@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Wien2wannier : from linearized augmented plane waves to maximally localized Wannier functions">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Wien2wannier</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/wien2wannier/wien2wannier">View on GitHub</a>
+
+          <h1 id="project_title">Wien2wannier</h1>
+          <h2 id="project_tagline">from linearized augmented plane waves to maximally localized Wannier functions</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/wien2wannier/wien2wannier/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/wien2wannier/wien2wannier/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="wien2wannier" class="anchor" href="#wien2wannier" aria-hidden="true"><span class="octicon octicon-link"></span></a>WIEN2WANNIER</h1>
+
+<p>By J. Kuneš, P. Wissgott, and E. Assmann</p>
+
+<p>wien2wannier is an interface program between WIEN2k and Wannier90 to obtain maximally localized Wannier functions from WIEN2k calculations.</p>
+
+<p>wien2wannier is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License. In addition, we ask that you cite</p>
+
+<p>J. Kuneš, R. Arita, P. Wissgott, A. Toschi, H. Ikeda, K. Held, Comp. Phys. Commun. 181, 1888 (2010)</p>
+
+<p>in any publications arising from the use of wien2wannier. Remember to also cite Wannier90 if you use it in conjunction with wien2wannier. For details see the file COPYING.</p>
+
+<p>WIEN2WANNIER 1.0 is included in the WIEN2k_14.2 distribution; to use it, simply install the latest WIEN2k version. WIEN2WANNIER-specific documentation is included in SRC_w2w/. For reference, a complete copy of WIEN2WANNIER is provided Initiates file downloadhere.</p>
+
+<p>Changes from v. 0.97 include:</p>
+
+<pre><code>WIEN2k integration
+    (most) wien2wannier programs can be called through x
+    installation in existing WIEN2k directory
+write_inwf replaces write_w2win and brings new features, e.g.
+    it knows about the real-valued spherical harmonics (s through f), s/p/d hybrids, and certain symmetry-related groups (e.g. d-t2g)
+    an arbitrary rotation can be applied to each initial projection
+    tab-completion, readline and history support
+fix handling of k-points for all lattice types
+w2w sets the Fermi energy to zero (i.e. shift_energy is no longer part of the standard procedure)
+</code></pre>
+
+<p>Caveat: woptic has been removed from this package and does not yet work together with the 1.0-series of wien2wannier. If you want to use woptic, please continue to use wien2wannier 0.97 for now.</p>
+
+<p>Bugfixes and changes in 1.0 (as of 2014-10-16) inlcude:</p>
+
+<pre><code>removed all Unicode (non-ASCII) characters from the messages printed by WIEN2WANNIER, they were causing problems for some users
+guiding centers are enabled by default in case.win
+added -efermi, -scf switches (to specify Fermi energy) to prepare_w2wdir
+fixed a bug in wplot2xsf --xsf-files in the case of multiple files
+fixed a bug in x relating to x joinvec -p 
+</code></pre>
+
+<p>For details see the file NEWS included in the distribution.</p>
+
+<p>The last pre-1.0 version is still available: Initiates file downloadwien2wannier 0.97</p>
+
+<p>Questions relating to the usage of WIEN2WANNIER should be sent to the WIEN2k mailing list. As regards Wannier90 and the MLWF procedure, there is a separate mailing list.</p>
+
+<p>Comments to the maintainer of WIEN2WANNIER can be sent to <a href="mailto:wien2wannier@ifp.tuwien.ac.at">wien2wannier@ifp.tuwien.ac.at</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Wien2wannier maintained by <a href="https://github.com/wien2wannier">wien2wannier</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
