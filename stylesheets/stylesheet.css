@@ -96,6 +96,7 @@ h6 {
 
 p {
   margin: 10px 0 15px 0;
+  text-align: justify;
 }
 
 footer p {
@@ -159,17 +160,11 @@ strong {
 
 img {
   position: relative;
-  margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
-
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
+  max-width: 250px;
+  float: right;
+  margin-right: -50px;
+  margin-left: 20px;
+  top:-20px;
 }
 
 p img {
