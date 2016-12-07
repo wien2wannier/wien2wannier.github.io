@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
     <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Wien2wannier : from linearized augmented plane waves to maximally localized Wannier functions">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
@@ -28,15 +27,15 @@ maximally localized Wannier functions</title>
             functions</a>
           </h2>
 
-          By <a href="http://www.fzu.cz/~kunes/">J. Kuneš</a>, <a href="http://www.3datax.com">P. Wissgott</a>,
-          and <a href="https://itp.tugraz.at/">E. Assmann</a>
+          By <a href="http://www.ifp.tuwien.ac.at/kunes/">J. Kuneš</a>, <a href="http://www.3datax.com">P. Wissgott</a>,
+          and <a href="https://orcid.org/0000-0001-9741-0206">E. Assmann</a>
 
             <section id="downloads">
-              <a class="download_version" href="https://github.com/wien2wannier/wien2wannier/releases/tag/v1.0.0">v1.0.0:</a>
+              <a class="download_version" href="https://github.com/wien2wannier/wien2wannier/releases/tag/v2.0.0">v2.0.0:</a>
               <a class="ug_download_link"
-              href="https://github.com/wien2wannier/wien2wannier/releases/download/v1.0.0/wien2wannier_userguide.pdf">user's guide</a>
-              <a class="zip_download_link" href="https://github.com/wien2wannier/wien2wannier/zipball/v1.0.0">.zip</a>
-              <a class="tar_download_link" href="https://github.com/wien2wannier/wien2wannier/tarball/v1.0.0">.tar.gz</a>
+              href="https://github.com/wien2wannier/wien2wannier/releases/download/v2.0.0/wien2wannier_userguide.pdf">user's guide</a>
+              <a class="zip_download_link" href="https://github.com/wien2wannier/wien2wannier/archive/v2.0.0.zip">.zip</a>
+              <a class="tar_download_link" href="https://github.com/wien2wannier/wien2wannier/archive/v2.0.0.tar.gz">.tar.gz</a>
             </section>
         </header>
     </div>
@@ -44,12 +43,12 @@ maximally localized Wannier functions</title>
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-<img src="images/w2w_pic.png"></img>
+<img alt="wien2wannier logo" src="images/w2w_pic.png">
 <p><span style="font-weight:bolder; font-size:large"
 class="w2w"></span> is an interface program
 between <a href="http://wien2k.at">Wien2k</a>
 and <a href="http://wannier.org">Wannier90</a> to obtain maximally
-localized Wannier functions from Wien2k calculations.</p>
+localized Wannier functions from Wien2k calculations.
 
 <h3>License</h3>
 
@@ -66,48 +65,41 @@ H. Ikeda,</span> and <span class="name">K. Held,</span><br>
 
 in any publications arising from the use of wien2wannier.  For
 details see the
-file <a href="https://github.com/wien2wannier/wien2wannier/blob/master/COPYING">COPYING.</a></p>
+file <a href="https://github.com/wien2wannier/wien2wannier/blob/v2.0.0/COPYING">COPYING.</a>
 
 
 <h3>News</h3>
 
-<p><span class="w2w"></span> 1.0 is included in the WIEN2k_14.2
+<p><span class="w2w"></span> 2.0.0 is included in
+the <a href="http://susi.theochem.tuwien.ac.at/reg_user/updates/">WIEN2k_16.1</a>
 distribution; to use it, simply install the latest Wien2k
 version.  <span class="w2w"></span>-specific documentation is included
-in <code>SRC_w2w/</code>.</p>
+in <code>SRC_w2w/</code>.
 
-<p>Changes in v1.0.0 include:</p>
+<p>This version introduces backward-incompatible changes in the format
+of <code>case.inwplot</code>. Several outdated options have been
+removed
+(see <a href="https://github.com/wien2wannier/wien2wannier/blob/v2.0.0/NEWS"><code>NEWS</code></a>
+for a description of the changes,
+and <a href="https://github.com/wien2wannier/wien2wannier/blob/v2.0.0/SRC_templates/case.inwplot"><code>SRC_templates/case.inwplot</code></a>
+for an example), as has <code>write_inwplot</code>.
 
-<ul>
-  <li>Wien2k integration
-    <ul>
-      <li>(most) wien2wannier programs can be called
-        through <code>x</code>
-      <li>installation in existing Wien2k directory
-    </ul>
-  <li><code>write_inwf</code> replaces <code>write_w2win</code> and
-    brings new features, e.g.  
-    <ul>
-      <li>it knows about the real-valued spherical harmonics (s
-        through f), s/p/d hybrids, and certain symmetry-related groups
-        (e.g. <code>d-t2g</code>)
-      <li>an arbitrary rotation can be applied to each initial
-        projection
-      <li> tab-completion, readline and history support
-    </ul>
-  <li>fix handling of k-points for all lattice types
-  <li><code>w2w</code> sets the Fermi energy to zero
-    (<code>shift_energy</code> is no longer part of the standard
-    procedure)
-</ul>
+<p>The new
+  script <a href="https://github.com/wien2wannier/wien2wannier/blob/v2.0.0/SRC/checkinwplot_lapw"><code>checkinwplot</code></a>
+  converts old-style input files. <code>x wplot</code> calls this
+  script automatically.
 
-<p>For details see the
-file <a href="https://github.com/wien2wannier/wien2wannier/blob/master/NEWS">NEWS</a>
-included in the distribution.</p>
+<p>For some other enhancements and bugfixes in this release, see the
+  file <a href="https://github.com/wien2wannier/wien2wannier/blob/v2.0.0/NEWS"><code>NEWS</code></a>
+included in the distribution.
 
-<p><a href="http://woptic.github.io"><span style="font-variant:small-caps">woptic</span></a>
-has been removed from <span class="w2w"></span> and is available as a
-separate package.</p>
+<p>For their valuable comments on past versions we thank
+
+ <blockquote>
+  Marc Höppner, Hong Jiang, Okan Köksal, Gernot
+  Kraberger, Laurence Marks, Oleg Rubel, Liang Si, Yundi Quan, Ulrich
+  Wedig, Jiaxu Yan, Jianxin Zhu, Manuel Zingl
+</blockquote>
 
 
 <h3>Contact</h3>
@@ -116,13 +108,10 @@ separate package.</p>
 be sent to <a href="http://www.wien2k.at/reg_user/mailing_list/">the
 Wien2k mailing list</a>. For Wannier90 and the MLWF procedure, there
 is a <a href="http://www.wannier.org/forum.html">separate mailing
-list</a>.</p>
+list</a>.
 
-<p>Bug reports, patches, etc. should be submitted
-through <a href="https://github.com/wien2wannier/wien2wannier">GitHub</a>.</p>
-
-<p>Comments to the maintainer of <span class="w2w"></span> can be sent
-to <a href="mailto:wien2wannier-AT-ifp.tuwien.ac.at">wien2wannier-AT-ifp.tuwien.ac.at</a>.</p>
+<p>Bug reports, patches, etc. can be submitted
+through <a href="https://github.com/wien2wannier/wien2wannier/issues">GitHub</a>.
       </section>
     </div>
 
@@ -130,8 +119,8 @@ to <a href="mailto:wien2wannier-AT-ifp.tuwien.ac.at">wien2wannier-AT-ifp.tuwien.
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright"><span class="w2w"></span> is maintained
-        by <a href="https://github.com/eassmann">Elias Assmann.</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        by <a href="https://github.com/eassmann">Elias Assmann.</a>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a>
       </footer>
     </div>
 
